@@ -1,3 +1,5 @@
+require 'pry'
+
 # Write your code below game_hash
 def game_hash
   {
@@ -127,3 +129,25 @@ def game_hash
 end
 
 # Write code here
+def all_players
+  game_hash[:home][:players].concat( game_hash[:away][:players])
+end
+
+def get_player( name )
+  all_player.find {|player| player[:player_name] === name}
+end
+
+def num_points_scored( name )
+  all_players.find {|player| player[:player_name] === name}[:points]
+end
+
+def shoe_size(name)
+  all_players.find {|player| player[:player_name] === name}[:shoe]
+end
+
+def team_colors( team_name )
+
+end
+
+
+# binding.pry
